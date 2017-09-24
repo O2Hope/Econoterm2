@@ -1,0 +1,173 @@
+body{
+    background-color: #1b1b1b;
+
+}
+
+h1, h2, h3, h4, h5, h6, button{
+    font-family: 'Bree Serif', serif;
+
+}
+
+#social{
+    background-color: #1c3643;
+}
+
+#social a{
+    color: white;
+}
+
+#titulo .callout {
+    color: white;
+    margin: inherit;
+    background-color: #1c3643;
+
+}
+
+#menu {
+    background-color: #1c3643;
+}
+
+#menu li a {
+    color: white;
+    font-family: 'Bree Serif', serif;
+
+}
+
+#menu li a:hover{
+    color: #1b1b1b;
+}
+
+#ticket .callout{
+    background-color: #1b1b1b;
+    color: white;
+    margin: inherit;
+}
+
+#ticket .callout button {
+    color: white;
+    border: 1px solid white;
+}
+
+#ticket .callout h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+#calculadora,
+#calculadora .tabs{
+    background-color: white;
+    color: #1c3643;
+    padding-top: 1em;
+    border: 0px;
+}
+
+#calculadora .tabs .tabs-title a {
+    font-size: 18px;
+    color: #1c3643;
+    font-family: 'Bree Serif', serif;
+}
+
+#calculadora .tabs .tabs-title a:hover {
+    color: #ee3f54;
+    background-color: white;
+}
+
+.tabs-title{
+    display: inline-block;
+    float: none;
+}
+
+#apps{
+    padding: 1em 0;
+    background-color: #1f162d;
+    color: white;
+}
+
+#apps h3{
+    margin-bottom: 50px;
+}
+
+.pricing-table {
+    background-color: #fefefe;
+    border: solid 1px #cacaca;
+    width: 90%;
+    text-align: center;
+    list-style-type: none;
+}
+
+.pricing-table li {
+    border-bottom: dotted 1px #cacaca;
+    padding: 0.875rem 1.125rem;
+    color: #1b1b1b;
+}
+
+.pricing-table li:last-child {
+    border-bottom: 0;
+}
+
+.pricing-table .title {
+    background-color: #3c4352;
+    color: #fefefe;
+    border-bottom: 0;
+}
+
+.pricing-table .price {
+    background-color: #e6e6e6;
+    font-size: 2rem;
+    border-bottom: 0;
+}
+
+.pricing-table .description {
+    color: #1b1b1b;
+    font-size: 80%;
+}
+
+.pricing-table :last-child {
+    margin-bottom: 0;
+}
+
+#contacto{
+    background-color: #1b1b1b;
+    padding-top: 1em;
+}
+
+#contacto h3, h4{
+    color: white;
+}
+
+#contacto .info-map iframe{
+    width: 100%;
+}
+
+#contacto form{
+
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+
+#contacto input[type="submit"]{
+    font-family: 'Bree Serif', serif;
+}
+
+#contacto .error{
+    font-family: 'Bree Serif', serif;
+    display: none;
+    color: white;
+}
+
+.data-sticky{
+    width: 100%;
+    background-color: #1c3643;
+}
+
+#canvas{
+    background-color: #1c3643;
+}
+
+#canvas li a{
+    color: white;
+}
+
+
+

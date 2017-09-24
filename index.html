@@ -1,0 +1,294 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Econoterm</title>
+    <link rel="stylesheet" href="icons/foundation-icons.css">
+    <link rel="stylesheet" href="css/foundation.css">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+
+  <body>
+
+  <!-- left canvas -->
+  <div class="off-canvas-wrapper">
+      <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+          <div id="canvas" class="off-canvas position-left" data-off-canvas>
+              <nav data-magellan>
+                  <ul class="menu vertical">
+                      <li><a href="#calculadora"> <i class="fi-pencil"></i> Calculo</a></li>
+                      <li><a href="#apps"> <i class="fi-social-android"></i> Apps</a></li>
+                      <li><a href="#"> <i class="fi-web"></i> Rolan</a></li>
+                      <li><a href="#contacto"> <i class="fi-map"></i> Contacto</a></li>
+                  </ul>
+              </nav>
+
+          </div>
+      </div>
+
+      <!-- content -->
+
+      <div class="off-canvas-content" data-off-canvas-content>
+
+          <!-- Social -->
+          <section id="social">
+              <div class="row align-middle align-center">
+                  <div class="column small-1">
+                      <a href="#">
+                          <i class="fi-social-facebook"></i>
+                      </a>
+                  </div>
+
+                  <div class="column small-1">
+                      <a href="#">
+                          <i class="fi-web"></i>
+                      </a>
+                  </div>
+              </div>
+          </section>
+
+          <!-- Title -->
+
+          <section id="titulo">
+              <div class="callout text-center">
+                  <h1>Econoterm</h1>
+              </div>
+          </section>
+
+          <!-- Menu -->
+
+          <section id="menu"data-sticky-container>
+              <div class="data-sticky" data-sticky data-options="marginTop:0;" data-sticky-on="small" data-top-anchor="menu">
+                  <nav data-magellan>
+                      <ul class="menu align-spaced show-for-small-only">
+                          <li><a href="#canvas" data-toggle="canvas"><i class="fi-list"></i> MENU</a></li>
+                      </ul>
+                      <ul class="menu align-spaced show-for-medium">
+                          <li><a href="#calculadora"> <i class="fi-pencil"></i> Calculo</a></li>
+                          <li><a href="#apps"> <i class="fi-social-android"></i> Apps</a></li>
+                          <li><a href="#"> <i class="fi-web"></i> Rolan</a></li>
+                          <li><a href="#contacto"> <i class="fi-map"></i> Contacto</a></li>
+                      </ul>
+                  </nav>
+              </div>
+          </section>
+
+          <!-- btn-mensaje -->
+
+          <section id="ticket">
+
+              <div class="callout large text-center">
+                  <a href="#">
+                      <h2>Tienes alguna duda o sugerencia?</h2>
+                      <button class="large button hollow">Envianos un mensaje</button>
+                  </a>
+              </div>
+
+          </section>
+
+          <!-- calculadora -->
+
+          <section id="calculadora" data-magellan-target="calculadora">
+              <h3 class="text-center">Calculadora</h3>
+              <ul class="tabs text-center" data-tabs id="calculadora-tabs">
+                  <li class="tabs-title is-active">
+                      <a href="#norm">NORM-009</a>
+                  </li>
+                  <li class="tabs-title">
+                      <a href="#astm">ASTM</a>
+                  </li>
+              </ul>
+
+              <div class="tabs-content" data-tabs-content="calculadora-tabs">
+                  <div class="tabs-panel is-active" id="norm">
+                      <div class="row">
+                          <div class="column small-12 medium-6">
+
+                              <label>Tipo
+                                  <select name="id">
+                                      <option value="Deposito">Deposito</option>
+                                      <option value="Esfera">Esfera</option>
+                                      <option value="Pared">Pared</option>
+                                      <option value="apollo">Tapa</option>
+                                      <option value="Tuberia1">Tuberia Horizontal</option>
+                                      <option value="Tuberia2">Tuberia Vertical</option>
+                                  </select>
+                              </label>
+                              <label>Diametro
+                              <div class="input-group">
+                                  <span class="input-group-label"><i class="fi-clipboard-notes"></i></span>
+                                  <input type="text" name="diametro" class="input-group-field" placeholder="diametro mm" required>
+                              </div>
+                              </label>
+
+                              <label>Tempertura ambiental
+                                  <div class="input-group">
+                                      <span class="input-group-label"><i class="fi-cloud"></i></span>
+                                      <input type="text" name="ambiental" class="input-group-field" placeholder="ambiental °c" required>
+                                  </div>
+                              </label>
+
+                              <label>Tempertura operación
+                                  <div class="input-group">
+                                      <span class="input-group-label"><i class="fi-cloud"></i></span>
+                                      <input type="text" name="operacion" class="input-group-field" placeholder="operacion °c" required>
+                                  </div>
+                              </label>
+
+
+                          </div>
+
+                          <div class="column medium-6 small-12">
+                              <label>Temperatura superficial
+                                  <div class="input-group">
+                                      <span class="input-group-label"><i class="fi-clipboard-notes"></i></span>
+                                      <input type="text" name="superficial" class="input-group-field" placeholder="superficial °c" required>
+                                  </div>
+                              </label>
+
+                              <label>Velocidad del viento
+                                  <div class="input-group">
+                                      <span class="input-group-label"><i class="fi-cloud"></i></span>
+                                      <input type="text" name="viento" class="input-group-field" placeholder="viento km/hr" required>
+                                  </div>
+                              </label>
+
+                              <label>Emisividad
+                                  <div class="input-group">
+                                      <span class="input-group-label"><i class="fi-cloud"></i></span>
+                                      <input type="text" name="emisividad" class="input-group-field" placeholder="emisividad" required>
+                                  </div>
+                              </label>
+
+                              <label>Aislante
+                                  <select name="aislante">
+                                      <option value="CPCA96">COLCHA DE FIBRA MINERAL ROLAN® CP/CA - 96 </option>
+                                      <option value="CPCA144">COLCHA DE FIBRA MINERAL ROLAN® CP/CA - 144</option>
+                                      <option value="CPCA192">COLCHA DE FIBRA MINERAL ROLAN® CP/CA - 192</option>
+                                      <option value="FF32">PLACA TERMOAISLANTE DE FIBRA MINERAL ROLAN® FF 32</option>
+                                      <option value="FF48">PLACA TERMOAISLANTE DE FIBRA MINERAL ROLAN® FF 48</option>
+                                      <option value="FF64">PLACA TERMOAISLANTE DE FIBRA MINERAL ROLAN® FF 64</option>
+                                      <option value="FF96">PLACA TERMOAISLANTE DE FIBRA MINERAL ROLAN® FF 96</option>
+                                      <option value="FF128">PLACA TERMOAISLANTE DE FIBRA MINERAL ROLAN® FF 128</option>
+                                  </select>
+                              </label>
+
+                          </div>
+
+
+                      </div>
+                      <div class="row">
+                          <div class="column small-12 text-center">
+                          <button class="button expanded" name="calcular" id="calcular">Calcular</button>
+                          </div>
+
+                      </div>
+                  </div>
+                  <div class="tabs-panel" id="astm">
+                      astm
+                  </div>
+              </div>
+          </section>
+
+          <!-- Apps -->
+
+          <section id="apps" data-magellan-target="apps">
+              <h3 class="text-center">Aplicaciones y servicicios</h3>
+              <div class="row" data-equalizer data-equalize-on="small">
+                  <div class="column small-12 medium-4">
+                      <ul class="pricing-table">
+                          <li class="title">Windows</li>
+                          <li class="price"><i class="fi-social-windows"></i></li>
+                          <li class="description">Calculo de la transferencia de calor, guarda los calculos y exporta a
+                              formatos como PDF o Word</li>
+                          <li>Envia los calculos por correo</li>
+                          <li data-equalizer-watch>Exporta a word, excel o pdf. </li>
+                          <li><a class="button hollow" href="#">Descarga gratis</a></li>
+                      </ul>
+                  </div>
+
+                  <div class="column small-12 medium-4">
+                      <ul class="pricing-table">
+                          <li class="title">Android</li>
+                          <li class="price"><i class="fi-social-android"></i></li>
+                          <li class="description">Calculo de transferencia de calor, guarda los calculos y envialos por
+                              mensajes de texto o WhatsApp</li>
+                          <li>+15 caracteristicas unicas</li>
+                          <li data-equalizer-watch>Almacena tus calculos en la nube.</li>
+                          <li><a class="button hollow" href="#">Descarga gratis</a></li>
+                      </ul>
+                  </div>
+
+                  <div class="column small-12 medium-4">
+                      <ul class="pricing-table">
+                          <li class="title">iOS</li>
+                          <li class="price"><i class="fi-social-apple"></i></li>
+                          <li class="description">Calculo de transferencia de calor, guarda los calculos y envialos por
+                              mensajes de texto o WhatsApp</li>
+                          <li>+20 caracteristicas unicas</li>
+                          <li>Almacena tus calculos en la nube.</li>
+                          <li><a class="button hollow" href="#">Descarga gratis</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </section>
+
+          <!-- Contacto -->
+
+          <section id="contacto" data-magellan-target="contacto">
+              <h3 class="text-center">Contacto</h3>
+              <div class="info-map" data-interchange="[assets/map.html, small]"></div>
+              <form action="" method="post" novalidate data-abide>
+                  <h4 class="text-center">Enviar mensaje</h4>
+
+                  <div data-abide-error class="row columns small-12 medium-6 text-center error">
+                      <p><i class="fi-alert"></i> Error en los datos.</p>
+                  </div>
+
+                  <div class="row columns small-12 medium-6">
+                      <div class="input-group">
+                          <span class="input-group-label"><i class="fi-mail"></i></span>
+                          <input type="email" name="email" class="input-group-field" placeholder="tu@correo.com" required>
+                      </div>
+
+                      <div class="input-group">
+                          <span class="input-group-label"><i class="fi-pencil"></i></span>
+                          <textarea type="text" name="coment" class="input-group-field" required></textarea>
+                          <div class="input-group-button">
+                              <input class="button" type="submit" value="Enviar">
+                          </div>
+                      </div>
+
+
+                  </div>
+              </form>
+          </section>
+
+      </div>
+
+  </div>
+
+
+
+
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+
+  <script>
+
+      $('#calcular').click(function () {
+          $.get('index.html',function (data) {
+              console.log(data)
+          });
+      });
+
+
+  </script>
+  </body>
+</html>
