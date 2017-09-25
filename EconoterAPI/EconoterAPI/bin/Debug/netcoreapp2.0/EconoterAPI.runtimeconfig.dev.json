@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "/home/o2hope/.dotnet/store/|arch|/|tfm|",
+      "/home/o2hope/.nuget/packages"
+    ]
+  }
+}

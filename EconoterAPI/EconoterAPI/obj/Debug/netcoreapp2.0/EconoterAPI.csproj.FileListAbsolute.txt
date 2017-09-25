@@ -1,0 +1,10 @@
+/home/o2hope/RiderProjects/EconoterAPI/EconoterAPI/bin/Debug/netcoreapp2.0/EconoterAPI.deps.json
+/home/o2hope/RiderProjects/EconoterAPI/EconoterAPI/bin/Debug/netcoreapp2.0/EconoterAPI.runtimeconfig.json
+/home/o2hope/RiderProjects/EconoterAPI/EconoterAPI/bin/Debug/netcoreapp2.0/EconoterAPI.runtimeconfig.dev.json
+/home/o2hope/RiderProjects/EconoterAPI/EconoterAPI/bin/Debug/netcoreapp2.0/EconoterAPI.dll
+/home/o2hope/RiderProjects/EconoterAPI/EconoterAPI/bin/Debug/netcoreapp2.0/EconoterAPI.pdb
+/home/o2hope/RiderProjects/EconoterAPI/EconoterAPI/obj/Debug/netcoreapp2.0/EconoterAPI.csproj.CoreCompileInputs.cache
+/home/o2hope/RiderProjects/EconoterAPI/EconoterAPI/obj/Debug/netcoreapp2.0/EconoterAPI.AssemblyInfoInputs.cache
+/home/o2hope/RiderProjects/EconoterAPI/EconoterAPI/obj/Debug/netcoreapp2.0/EconoterAPI.AssemblyInfo.cs
+/home/o2hope/RiderProjects/EconoterAPI/EconoterAPI/obj/Debug/netcoreapp2.0/EconoterAPI.dll
+/home/o2hope/RiderProjects/EconoterAPI/EconoterAPI/obj/Debug/netcoreapp2.0/EconoterAPI.pdb
