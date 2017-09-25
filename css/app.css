@@ -169,5 +169,15 @@ h1, h2, h3, h4, h5, h6, button{
     color: white;
 }
 
+#calculadora label{
+    font-family: 'Bree Serif', serif;
+    color: #1c3643;
+
+}
+
+#calculadora button{
+    background-color: #1c3643;
+}
+
 
 

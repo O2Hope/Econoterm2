@@ -13,6 +13,28 @@
 
   <body>
 
+  <!-- modal -->
+
+  <div class="reveal" id="resultadoModal" data-reveal>
+      <h3 id="tituloTrans" class="text-center"></h3>
+      <table id="tablaCalc">
+          <thead>
+          <tr>
+              <th>#</th>
+              <th>Espesor</th>
+              <th>Flux</th>
+              <th>Temperatura superficial Max.</th>
+          </tr>
+          </thead>
+          <tbody class="text-center" >
+
+          </tbody>
+      </table>
+      <button class="close-button" data-close aria-label="Close modal" type="button">
+          <span aria-hidden="true">&times;</span>
+      </button>
+  </div>
+
   <!-- left canvas -->
   <div class="off-canvas-wrapper">
       <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
@@ -21,7 +43,7 @@
                   <ul class="menu vertical">
                       <li><a href="#calculadora"> <i class="fi-pencil"></i> Calculo</a></li>
                       <li><a href="#apps"> <i class="fi-social-android"></i> Apps</a></li>
-                      <li><a href="#"> <i class="fi-web"></i> Rolan</a></li>
+                      <li><a href="http://rolan.com"> <i class="fi-web"></i> Rolan</a></li>
                       <li><a href="#contacto"> <i class="fi-map"></i> Contacto</a></li>
                   </ul>
               </nav>
@@ -69,7 +91,7 @@
                       <ul class="menu align-spaced show-for-medium">
                           <li><a href="#calculadora"> <i class="fi-pencil"></i> Calculo</a></li>
                           <li><a href="#apps"> <i class="fi-social-android"></i> Apps</a></li>
-                          <li><a href="#"> <i class="fi-web"></i> Rolan</a></li>
+                          <li><a href="http://rolan.com"> <i class="fi-web"></i> Rolan</a></li>
                           <li><a href="#contacto"> <i class="fi-map"></i> Contacto</a></li>
                       </ul>
                   </nav>
@@ -108,7 +130,7 @@
                           <div class="column small-12 medium-6">
 
                               <label>Tipo
-                                  <select name="id">
+                                  <select id="tipo">
                                       <option value="Deposito">Deposito</option>
                                       <option value="Esfera">Esfera</option>
                                       <option value="Pared">Pared</option>
@@ -120,21 +142,21 @@
                               <label>Diametro
                               <div class="input-group">
                                   <span class="input-group-label"><i class="fi-clipboard-notes"></i></span>
-                                  <input type="text" name="diametro" class="input-group-field" placeholder="diametro mm" required>
+                                  <input type="text" id="diametro" class="input-group-field" placeholder="diametro mm" required>
                               </div>
                               </label>
 
                               <label>Tempertura ambiental
                                   <div class="input-group">
                                       <span class="input-group-label"><i class="fi-cloud"></i></span>
-                                      <input type="text" name="ambiental" class="input-group-field" placeholder="ambiental °c" required>
+                                      <input type="text" id="ambiental" class="input-group-field" placeholder="ambiental °c" required>
                                   </div>
                               </label>
 
                               <label>Tempertura operación
                                   <div class="input-group">
                                       <span class="input-group-label"><i class="fi-cloud"></i></span>
-                                      <input type="text" name="operacion" class="input-group-field" placeholder="operacion °c" required>
+                                      <input type="text" id="operacion" class="input-group-field" placeholder="operacion °c" required>
                                   </div>
                               </label>
 
@@ -145,26 +167,26 @@
                               <label>Temperatura superficial
                                   <div class="input-group">
                                       <span class="input-group-label"><i class="fi-clipboard-notes"></i></span>
-                                      <input type="text" name="superficial" class="input-group-field" placeholder="superficial °c" required>
+                                      <input type="text" id="superficial" class="input-group-field" placeholder="superficial °c" required>
                                   </div>
                               </label>
 
                               <label>Velocidad del viento
                                   <div class="input-group">
                                       <span class="input-group-label"><i class="fi-cloud"></i></span>
-                                      <input type="text" name="viento" class="input-group-field" placeholder="viento km/hr" required>
+                                      <input type="text" id="viento" class="input-group-field" placeholder="viento km/hr" required>
                                   </div>
                               </label>
 
                               <label>Emisividad
                                   <div class="input-group">
                                       <span class="input-group-label"><i class="fi-cloud"></i></span>
-                                      <input type="text" name="emisividad" class="input-group-field" placeholder="emisividad" required>
+                                      <input type="text" id="emisividad" class="input-group-field" placeholder="emisividad" required>
                                   </div>
                               </label>
 
                               <label>Aislante
-                                  <select name="aislante">
+                                  <select id="aislante">
                                       <option value="CPCA96">COLCHA DE FIBRA MINERAL ROLAN® CP/CA - 96 </option>
                                       <option value="CPCA144">COLCHA DE FIBRA MINERAL ROLAN® CP/CA - 144</option>
                                       <option value="CPCA192">COLCHA DE FIBRA MINERAL ROLAN® CP/CA - 192</option>
@@ -182,13 +204,13 @@
                       </div>
                       <div class="row">
                           <div class="column small-12 text-center">
-                          <button class="button expanded" name="calcular" id="calcular">Calcular</button>
+                          <button class="button expanded" name="calcular" id="calcular" data-open="resultadoModal">Calcular</button>
                           </div>
 
                       </div>
                   </div>
                   <div class="tabs-panel" id="astm">
-                      astm
+
                   </div>
               </div>
           </section>
@@ -263,6 +285,7 @@
                       </div>
 
 
+
                   </div>
               </form>
           </section>
@@ -282,10 +305,60 @@
 
   <script>
 
+      var ambiental1;
+      var superficial1;
+      var operacion1;
+      var diametro1;
+      var viento1;
+      var emisividad1;
+      var aislante1;
+      var list;
+
       $('#calcular').click(function () {
-          $.get('index.html',function (data) {
-              console.log(data)
+
+       ambiental1 = $('#ambiental').val();
+       superficial1 = $('#superficial').val();
+       operacion1 = $('#operacion').val();
+       diametro1 = $('#diametro').val();
+       viento1 = $('#viento').val();
+       emisividad1 = $('#emisividad').val();
+       aislante1 = $('#aislante').val();
+       if (aislante1 == 'CPCA96')
+           aislante1 = 0;
+       if (aislante1 == 'CPCA144')
+           aislante1 = 1;
+       if (aislante1 == 'CPA192')
+           aislante1 = 2;
+       if (aislante1 == 'FF32')
+           aislante1 = 3;
+       if (aislante1 == 'FF48')
+           aislante1 = 4;
+       if (aislante1 == 'FF64')
+           aislante1 = 5;
+       if (aislante1 == 'FF76')
+           aislante1 = 6;
+       if (aislante1 == 'FF128')
+           aislante1 = 7;
+
+          $.getJSON('http://econoterm.coep.com.mx/api/calculo', {
+              ambiental: ambiental1,
+              superficial: superficial1,
+              operacion: operacion1,
+              diametro: diametro1,
+              viento: viento1,
+              emisividad: emisividad1,
+              aislante: aislante1
+          })
+              .done (function (data) {
+                     $.each(data.lista, function (i, item) {
+                       $('#tablaCalc').find('tbody')
+                           .append('<tr><td>' + i + '</td>' + '<td>' + item.espesor + '</td>' + '<td>' + item.flux + '</td>' +
+                           '<td>' + item.supMaxima + '</td></tr>')
+                     });
+                     $('#tituloTrans').text('Transferencia para cumplir la norma: '+ data.transfMax + ' w/m');
+
           });
+
       });
 
 
