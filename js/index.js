@@ -18,9 +18,10 @@ $('#reset').click((function () {
 }));
 
 $('#tipo').change(function () {
-    if ($('#tipo').val() == 'Deposito'){
-        $('#diametro').prop('disabled',true)
-    }
+    if ($('#tipo').val() == 'Deposito' || $('#tipo').val() == 'Tapa' || $('#tipo').val() == 'Pared' )
+        $('#diametro').prop('disabled', true);
+    else $('#diametro').prop('disabled', false);
+
 });
 
 $('#calcular').click(function () {
