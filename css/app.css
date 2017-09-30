@@ -183,5 +183,38 @@ h1, h2, h3, h4, h5, h6, button{
     background-color: #ee394a;
 }
 
+#resultadoModal #menuModal .tabs{
+    background-color: white;
+    color: #1c3643;
+    padding-top: 1em;
+    border: 0px;
+}
+
+#resultadoModal #menuModal .tabs .tabs-title a {
+    font-size: 18px;
+    color: #1c3643;
+    font-family: 'Bree Serif', serif;
+}
+
+#resultadoModal #menuModal .tabs .tabs-title a:hover {
+    color: #ee3f54;
+    background-color: white;
+}
+
+#resultadoModal th{
+    font-size: 14px;
+    color: #1c3643;
+    font-family: 'Bree Serif', serif;
+}
+
+#resultadoModal #menuModal .tabs-content{
+    border: 0;
+}
+
+#resultadoModal #menuModal #pdf a i {
+    font-size: 38px;
+    color: #1b1b1b;
+}
+
 
 

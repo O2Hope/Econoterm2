@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/foundation.css">
     <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
     <link rel="stylesheet" href="css/app.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js"></script>
+
   </head>
 
   <body>
@@ -16,24 +18,54 @@
   <!-- modal -->
 
   <div class="reveal" id="resultadoModal" data-reveal>
-      <h3 id="tituloTrans" class="text-center"></h3>
-      <table id="tablaCalc">
-          <thead>
-          <tr>
-              <th>#</th>
-              <th>Espesor</th>
-              <th>Flux</th>
-              <th>Temperatura superficial Max.</th>
-          </tr>
-          </thead>
-          <tbody class="text-center" >
+      <section id="menuModal">
+          <h3 class="text-center">Calculadora</h3>
+          <ul class="tabs text-center" data-tabs id="modal-tabs">
+              <li class="tabs-title is-active">
+                  <a href="#lista">Lista</a>
+              </li>
+              <li class="tabs-title">
+                  <a href="#graph">Grafica</a>
+              </li>
+              <li class="tabs-title">
+                  <a href="#pdf">Descarga</a>
+              </li>
+          </ul>
 
-          </tbody>
-      </table>
+          <div class="tabs-content" data-tabs-content="modal-tabs">
+              <div class="tabs-panel is-active" id="lista">
+                  <h3 id="tituloTrans" class="text-center"></h3>
+                  <table id="tablaCalc">
+                      <thead class="text-center">
+                      <tr>
+                          <th class="text-center">#</th>
+                          <th class="text-center">Espesor</th>
+                          <th class="text-center">Flux</th>
+                          <th class="text-center">Temperatura superficial Max.</th>
+                      </tr>
+                      </thead>
+                      <tbody class="text-center" >
+
+                      </tbody>
+                  </table>
+              </div>
+              <div class="tabs-panel" id="graph">
+                  graph
+              </div>
+              <div class="tabs-panel" id="pdf">
+                  <div class="row">
+                      <div class="column small-12 text-center">
+                        <a id="descargaPDF"><i class="fi-page-export-pdf"></i></a>
+                      </div>
+                  </div>
+              </div>
+          </div>
       <button class="close-button" data-close aria-label="Close modal" type="button">
           <span aria-hidden="true">&times;</span>
       </button>
+      </section>
   </div>
+
 
   <!-- left canvas -->
   <div class="off-canvas-wrapper">

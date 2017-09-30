@@ -70,3 +70,29 @@ $('#calcular').click(function () {
         });
 
 });
+
+$('#descargaPDF').click(function () {
+    pruebaDivAPdf()
+});
+
+function pruebaDivAPdf() {
+    var pdf = new jsPDF('p', 'pt', 'letter');
+
+    pdf.cellInitialize();
+    pdf.setFontSize(10);
+    pdf.text(30,20,$('#tituloTrans').text());
+
+    $.each($('#tablaCalc tr'), function (i, row) {
+        if ($(row).text().trim().length !== 0) {
+            $.each($(row).find("td, th"), function (j, cell) {
+                var txt = $(cell).text().trim() || " ";
+                var width = 180;
+                if (j != 1) {
+                    pdf.cell(10, 50, width, 18, txt, i);
+                }
+            });
+        }
+    });
+
+    pdf.save('Calculo-Econoterm.pdf');
+}
