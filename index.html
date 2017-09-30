@@ -102,8 +102,8 @@
 
           <section id="ticket">
 
-              <div class="callout large text-center">
-                  <a href="#">
+              <div class="callout large text-center" data-magellan>
+                  <a href="#contacto">
                       <h2>Tienes alguna duda o sugerencia?</h2>
                       <button class="large button hollow">Envianos un mensaje</button>
                   </a>
@@ -205,6 +205,7 @@
                       <div class="row">
                           <div class="column small-12 text-center">
                           <button class="button expanded" name="calcular" id="calcular" data-open="resultadoModal">Calcular</button>
+                          <button class="button expanded" name="reset" id="reset">Limpiar</button>
                           </div>
 
                       </div>
@@ -303,65 +304,6 @@
     <script src="js/vendor/foundation.js"></script>
     <script src="js/app.js"></script>
 
-  <script>
-
-      var ambiental1;
-      var superficial1;
-      var operacion1;
-      var diametro1;
-      var viento1;
-      var emisividad1;
-      var aislante1;
-      var list;
-
-      $('#calcular').click(function () {
-
-       ambiental1 = $('#ambiental').val();
-       superficial1 = $('#superficial').val();
-       operacion1 = $('#operacion').val();
-       diametro1 = $('#diametro').val();
-       viento1 = $('#viento').val();
-       emisividad1 = $('#emisividad').val();
-       aislante1 = $('#aislante').val();
-       if (aislante1 == 'CPCA96')
-           aislante1 = 0;
-       if (aislante1 == 'CPCA144')
-           aislante1 = 1;
-       if (aislante1 == 'CPA192')
-           aislante1 = 2;
-       if (aislante1 == 'FF32')
-           aislante1 = 3;
-       if (aislante1 == 'FF48')
-           aislante1 = 4;
-       if (aislante1 == 'FF64')
-           aislante1 = 5;
-       if (aislante1 == 'FF76')
-           aislante1 = 6;
-       if (aislante1 == 'FF128')
-           aislante1 = 7;
-
-          $.getJSON('http://econoterm.coep.com.mx/api/calculo', {
-              ambiental: ambiental1,
-              superficial: superficial1,
-              operacion: operacion1,
-              diametro: diametro1,
-              viento: viento1,
-              emisividad: emisividad1,
-              aislante: aislante1
-          })
-              .done (function (data) {
-                     $.each(data.lista, function (i, item) {
-                       $('#tablaCalc').find('tbody')
-                           .append('<tr><td>' + i + '</td>' + '<td>' + item.espesor + '</td>' + '<td>' + item.flux + '</td>' +
-                           '<td>' + item.supMaxima + '</td></tr>')
-                     });
-                     $('#tituloTrans').text('Transferencia para cumplir la norma: '+ data.transfMax + ' w/m');
-
-          });
-
-      });
-
-
-  </script>
+  <script src="js/index.js"></script>
   </body>
 </html>

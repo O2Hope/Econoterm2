@@ -175,8 +175,12 @@ h1, h2, h3, h4, h5, h6, button{
 
 }
 
-#calculadora button{
+#calculadora #calcular{
     background-color: #1c3643;
+}
+
+#calculadora #reset{
+    background-color: #ee394a;
 }
 
 
