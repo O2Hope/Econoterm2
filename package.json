@@ -1,0 +1,27 @@
+{
+  "name": "econoterm2",
+  "version": "0.1.0",
+  "description": "Calculo de transferencia de calor",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/O2Hope/Econoterm2.git"
+  },
+  "keywords": [
+    "econoterm",
+    "calculo",
+    "calor",
+    "javascript",
+    "net",
+    "core"
+  ],
+  "author": "Agustin Ruiz <agusvaldes2@live.com> (https://github.com/o2hope)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/O2Hope/Econoterm2/issues"
+  },
+  "homepage": "https://github.com/O2Hope/Econoterm2"
+}
