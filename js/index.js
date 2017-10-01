@@ -5,6 +5,9 @@ var diametro1;
 var viento1;
 var emisividad1;
 var aislante1;
+var flux = [];
+var espesor = [];
+var supMaximus = [];
 
 $('#diametro').prop('disabled',true)
 
@@ -61,10 +64,22 @@ $('#calcular').click(function () {
     })
         .done (function (data) {
             $.each(data.lista, function (i, item) {
+                    if (i == 10 || i == 20 || i == 30 || i == 40 || i == 50 || i == 60 || i == 70 || i == 80 || i == 90){
+                        var flexC = item.flux.slice(0,-4);
+                        var supC = item.supMaxima.slice(0,-2);
+
+                        flux.push(flexC);
+                        supMaximus.push(supC);
+                    }
+
+
+
                 $('#tablaCalc').find('tbody')
                     .append('<tr><td>' + i + '</td>' + '<td>' + item.espesor + '</td>' + '<td>' + item.flux + '</td>' +
-                        '<td>' + item.supMaxima + '</td></tr>')
+                        '<td>' + item.supMaxima + '</td></tr>');
+
             });
+
             $('#tituloTrans').text('Transferencia para cumplir la norma: '+ data.transfMax + ' w/m');
 
         });
@@ -96,3 +111,32 @@ function pruebaDivAPdf() {
 
     pdf.save('Calculo-Econoterm.pdf');
 }
+
+var ctx = document.getElementById("myChart").getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: [64, 127, 190, 254, 318, 381, 444, 508, 572 ],
+        datasets: [{
+            label: 'Flux',
+            data: flux,
+            borderColor: [
+                'rgba(255,99,132,1)'
+            ],
+            borderWidth: 1
+        },{
+            label: 'Temperatura Superficial Max',
+            data: supMaximus,
+            borderColor: '#1b1b1b'
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
