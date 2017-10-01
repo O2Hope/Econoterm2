@@ -1,25 +1,25 @@
-#Econoterm 2
+# Econoterm 2
 
 Econoterm es un software especializado para realizar el calculo de transferencia de calor
 de superficies planas y tuberias.
 
-##Descripcion
+## Descripcion
 
 //
 //
 //
 
-##Instalacion
+## Instalacion
 
 //
 //
 //
 
-##Uso
+## Uso
 
 //
 //
 //
 
-##Creditos
+## Creditos
 
